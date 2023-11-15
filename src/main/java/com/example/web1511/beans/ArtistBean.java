@@ -33,4 +33,9 @@ public class ArtistBean implements Serializable {
     public void delete(int id) {
         artistDao.delete(id);
     }
+
+    public String showAlbums(int artistId) {
+        artist = artistDao.find(artistId);
+        return "albums_by_artist";
+    }
 }
